@@ -12,4 +12,3 @@ jobs:
       - name: Echo the message
         run: |
           echo "Hola carlos!"
-
