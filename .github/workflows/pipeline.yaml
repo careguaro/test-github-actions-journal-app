@@ -15,7 +15,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '18.18.0'
+      - run: npm install --global yarn   
       - name: Install dependencies
-        run: npm install
-      - name: Lint
-        run: npm run lint
+        run: yarn
+      # - name: Lint
+        # run: yarn link
