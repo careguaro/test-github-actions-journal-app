@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Box, Divider, Drawer, List, Toolbar, Typography } from "@mui/material"
 import { useSelector } from "react-redux";
 import { SideBarItem } from "./";
@@ -39,3 +40,7 @@ export const SideBar = ({ drawerWidth }) => {
         </Box>
     )
 }
+
+SideBar.propTypes = {
+    drawerWidth: PropTypes.any,
+};

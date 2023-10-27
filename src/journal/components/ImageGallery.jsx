@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { ImageList, ImageListItem } from "@mui/material";
 
 
@@ -17,3 +18,7 @@ export const ImageGallery = ({images}) => {
         </ImageList>
     );
 }
+
+ImageGallery.propTypes = {
+    images: PropTypes.any,
+  };

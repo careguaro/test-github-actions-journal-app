@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Grid, Typography } from '@mui/material'
 
 export const AuthLayout = ({ children, title = '' }) => {
@@ -22,3 +23,8 @@ export const AuthLayout = ({ children, title = '' }) => {
         </Grid>
     )
 }
+
+AuthLayout.propTypes = {
+    children: PropTypes.any,
+    title: PropTypes.string.isRequired,
+  };

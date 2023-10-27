@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Box, Toolbar } from '@mui/material'
 import { SideBar, NavBar } from '../components';
 
@@ -24,3 +25,7 @@ export const JournalLayout = ({ children }) => {
         </Box>
     )
 }
+
+JournalLayout.propTypes = {
+    children: PropTypes.any,
+};
