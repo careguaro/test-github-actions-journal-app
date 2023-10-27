@@ -82,7 +82,7 @@ describe('Pruebas en AuthThunks', () => {
     await startLoginWithEmailPassword({})(dispatch);
 
     expect(dispatch).toHaveBeenCalledWith(checkingCredentials());
-    expect(dispatch).toHaveBeenCalledWith(logout(loginData.errorMessage));
+    expect(dispatch).toHaveBeenCalledWith(logout(loginData));
   });
 
   test('startLogout debe llamar logoutFirebase, clearNotes y logout', async () => {

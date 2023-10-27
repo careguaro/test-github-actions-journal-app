@@ -60,7 +60,7 @@ describe('Prueba en LoginPage', () => {
     });
 
     test('Submit debe llamar startLoginWithEmailPassword', () => {
-        const email = 'careguaro@gmail.com';
+        const email = 'damarismontilla32@gmail.com';
         const password = '123456';
         render(
             <Provider store={store}>

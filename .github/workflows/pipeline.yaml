@@ -17,6 +17,11 @@ jobs:
           node-version: '18.18.0'
       - run: npm install --global yarn   
       - name: Install dependencies
-        run: yarn
+        run: yarn --no-audit
+        # run: npm install --no-audit --no-fund --no-optional
       - name: Lint
         run: yarn link
+      - name: Build
+        run: yarn build
+      - name: Test
+        run: yarn test
