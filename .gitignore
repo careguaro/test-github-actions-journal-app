@@ -24,3 +24,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+cypress/screenshots
+cypress/e2e/fixtures
+cypress/e2e/support
