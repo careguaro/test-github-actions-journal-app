@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize]
 
 jobs:
   deploy:
@@ -31,6 +34,8 @@ jobs:
           command: yarn test:e2e
           start: yarn start-test
           wait-on: http://localhost:5000
+      - name: Build to deploy
+        run: yarn build    
       - name: Deploy to Heroku
         uses: akhileshns/heroku-deploy@v3.12.14
         with:
