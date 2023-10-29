@@ -17,7 +17,7 @@ jobs:
           node-version: '18.18.0'
       - run: npm install --global yarn   
       - name: Install dependencies
-        run: yarn --no-audit
+        run: yarn install --frozen-lockfile
         # run: npm install --no-audit --no-fund --no-optional
       - name: Lint
         run: yarn link
