@@ -14,8 +14,8 @@ jobs:
           fetch-depth: 0
       - uses: actions/setup-node@v3
         with:
-          node-version: '18.18.0'
-      - run: npm install --global yarn   
+          node-version: "18.18.0"
+      - run: npm install --global yarn
       - name: Install dependencies
         run: yarn install --frozen-lockfile
         # run: npm install --no-audit --no-fund --no-optional
@@ -31,3 +31,9 @@ jobs:
           command: yarn test:e2e
           start: yarn start-test
           wait-on: http://localhost:5000
+      - name: Deploy to Heroku
+        uses: akhileshns/heroku-deploy@v3.12.14
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: ${{secrets.HEROKU_APP}}
+          heroku_email: ${{secrets.HEROKU_API_EMAIL}}
