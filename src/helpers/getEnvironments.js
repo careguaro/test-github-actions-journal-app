@@ -2,7 +2,7 @@
 export const getEnvironments = () => {
     // import.meta.env;
 
-    if(import.meta.env.VITE_APIKEY) {
+    if(import.meta.env) {
         return {
             // ...import.meta.env
             VITE_APIKEY: import.meta.env.VITE_APIKEY,
