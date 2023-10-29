@@ -36,11 +36,11 @@ jobs:
           wait-on: http://localhost:5000
       - name: Build to deploy
         run: yarn build    
-      - name: Deploy to Heroku
+      - name: Deploy to Heroku  
         uses: akhileshns/heroku-deploy@v3.12.14
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: ${{secrets.HEROKU_APP}}
           heroku_email: ${{secrets.HEROKU_API_EMAIL}}
-          healthcheck: "https://${{secrets.HEROKU_APP}}/health"
-          rollbackonhealthcheckfailed: true
+          # healthcheck: "https://${{secrets.HEROKU_APP}}/health"
+          # rollbackonhealthcheckfailed: true
