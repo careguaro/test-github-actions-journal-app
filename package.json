@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build-test": "vite build --mode test",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 20",
     "start-test": "NODE_ENV=test node app.cjs",
     "preview": "vite preview",

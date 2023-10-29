@@ -22,7 +22,7 @@ jobs:
       - name: Lint
         run: yarn link
       - name: Build
-        run: yarn build
+        run: yarn build-test
       - name: Test
         run: yarn test
       - name: E2E tests
