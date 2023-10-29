@@ -1,7 +1,7 @@
 {
   "name": "journal-app",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,6 +9,7 @@
     "build-test": "vite build --mode test",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 20",
     "start-test": "NODE_ENV=test node app.cjs",
+    "start": "node app.cjs",
     "preview": "vite preview",
     "test": "jest",
     "test:watch": "jest --watchAll",
